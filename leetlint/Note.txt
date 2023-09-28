@@ -1,0 +1,46 @@
+Python [[][]] 遍历 list[list[]]
+
+遍历所有元素
+如果你想遍历所有元素，你可以使用两个嵌套循环：
+
+python
+Copy code
+for i in range(len(restaurants)):
+    for j in range(len(restaurants[i])):
+        print(restaurants[i][j])
+
+或者更 Pythonic 的方式：
+
+python
+Copy code
+for sublist in restaurants:
+    for item in sublist:
+        print(item)
+
+
+===============================================================================================
+
+Python 给一个元素定值
+
+# 创建一个列表
+my_list = [1, 2, 3, 4, 5]
+
+# 打印原始列表
+print("Original List:", my_list)
+
+# 通过索引更改列表中的元素，例如将索引为 2 的元素更改为 99
+my_list[2] = 99
+
+# 打印更改后的列表
+print("Modified List:", my_list)
+
+===============================================================================================
+
+You are given a 0-indexed 2D integer array flowers, where flowers[i] = [starti, endi] means the ith flower will be in full bloom from starti to endi (inclusive). You are also given a 0-indexed integer array people of size n, where people[i] is the time that the ith person will arrive to see the flowers.
+
+Return an integer array answer of size n, where answer[i] is the number of flowers that are in full bloom when the ith person arrives.
+Input: flowers = [[1,6],[3,7],[9,12],[4,13]], poeple = [2,3,7,11]
+Output: [1,2,2,2]
+Explanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.
+For each person, we return the number of flowers in full bloom during their arrival.
+
